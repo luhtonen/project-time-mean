@@ -21,12 +21,41 @@ var CustomerSchema = new Schema({
     required: 'Customer name cannot be empty'
   },
   address: {
-    type: Schema.ObjectId,
-    ref: 'Address'
+    type: String,
+    default: '',
+    trim: true
   },
-  contact: {
-    type: Schema.ObjectId,
-    ref: 'Contact'
+  additional: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  city: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  zipcode: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  country: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Country cannot be empty'
+  },
+  email: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Email cannot be empty'
+  },
+  phone: {
+    type: String,
+    default: '',
+    trim: true
   },
   user: {
     type: Schema.ObjectId,

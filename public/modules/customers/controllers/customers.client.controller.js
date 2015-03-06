@@ -5,22 +5,15 @@ angular.module('customers').controller('CustomersController', ['$scope', '$state
     $scope.authentication = Authentication;
 
     $scope.create = function() {
-      var address = new Address({
+      var customer = new Customers({
+        name: this.name,
         address: this.address,
         additional: this.additional,
         city: this.city,
         zipcode: this.zipcode,
-        country: this.country
-      });
-      var contact = new Contact({
-        name: this.contactName,
+        country: this.country,
         email: this.email,
         phone: this.phone
-      });
-      var customer = new Customer({
-        name: this.name,
-        address: address,
-        contact: contact
       });
       customer.save(function(response) {
         $location.path('customers/' + response._id);
