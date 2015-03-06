@@ -1,0 +1,13 @@
+<section data-ng-controller="CustomerController" data-ng-init="find()">
+  <div class="page-header">
+    <h1>Customers</h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="customer in customers" data-ng-href="#!/customers/{{customer._id}}" class="list-group-item">
+      {{customer.name}}
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="customers.$resolved && !customers.length">
+    No customers yet, why don't you <a href="/#/custoemrs/create">create one</a>?
+  </div>
+</section>
