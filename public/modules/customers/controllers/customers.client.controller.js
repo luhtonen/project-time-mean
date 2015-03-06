@@ -15,7 +15,7 @@ angular.module('customers').controller('CustomersController', ['$scope', '$state
         email: this.email,
         phone: this.phone
       });
-      customer.save(function(response) {
+      customer.$save(function(response) {
         $location.path('customers/' + response._id);
 
         $scope.name = '';
