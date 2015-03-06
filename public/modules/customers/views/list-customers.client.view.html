@@ -1,4 +1,4 @@
-<section data-ng-controller="CustomerController" data-ng-init="find()">
+<section data-ng-controller="CustomersController" data-ng-init="find()">
   <div class="page-header">
     <h1>Customers</h1>
   </div>
@@ -8,6 +8,6 @@
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="customers.$resolved && !customers.length">
-    No customers yet, why don't you <a href="/#/custoemrs/create">create one</a>?
+    No customers yet, why don't you <a href="/#!/customers/create">create one</a>?
   </div>
 </section>
