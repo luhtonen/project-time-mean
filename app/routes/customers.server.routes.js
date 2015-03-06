@@ -12,7 +12,7 @@ module.exports = function(app) {
     .get(customers.list)
     .post(users.requiresLogin, customers.create);
 
-  app.route('/customer/:customerId')
+  app.route('/customers/:customerId')
     .get(customers.read)
     .put(users.requiresLogin, customers.hasAuthorization, customers.update)
     .delete(users.requiresLogin, customers.hasAuthorization, customers.delete);
