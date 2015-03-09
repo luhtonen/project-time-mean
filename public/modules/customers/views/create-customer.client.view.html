@@ -2,64 +2,6 @@
   <div class="page-header">
     <h1>New Customer</h1>
   </div>
-  <div class="col-md-12">
-    <form name="customerForm" class="form-horizontal" data-ng-submit="create()" novalidate>
-      <fieldset>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.name.$dirty && customerForm.name.$invalid }">
-          <label class="control-label" for="name">Name</label>
-          <div class="controls">
-            <input name="name" type="text" data-ng-model="name" class="form-control" placeholder="Customer name" required>
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.country.$dirty && customerForm.country.$invalid }">
-          <label class="control-label" for="country">Country</label>
-          <div class="controls">
-            <input name="country" type="text" data-ng-model="country" class="form-control" placeholder="Country" required>
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.zipcode.$dirty && customerForm.zipcode.$invalid }">
-          <label class="control-label" for="zipcode">Postal code</label>
-          <div class="controls">
-            <input name="zipcode" type="text" data-ng-model="zipcode" class="form-control" placeholder="Postal code">
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.city.$dirty && customerForm.city.$invalid }">
-          <label class="control-label" for="city">City</label>
-          <div class="controls">
-            <input name="city" type="text" data-ng-model="city" class="form-control" placeholder="City">
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.address.$dirty && customerForm.address.$invalid }">
-          <label class="control-label" for="address">Address</label>
-          <div class="controls">
-            <input name="address" type="text" data-ng-model="address" class="form-control" placeholder="Street address or PO">
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.additional.$dirty && customerForm.additional.$invalid }">
-          <label class="control-label" for="additional">Additional address</label>
-          <div class="controls">
-            <input name="additional" type="text" data-ng-model="additional" class="form-control" placeholder="Additional address">
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.email.$dirty && customerForm.email.$invalid }">
-          <label class="control-label" for="email">Email</label>
-          <div class="controls">
-            <input name="email" type="email" data-ng-model="email" class="form-control" placeholder="Email" required>
-          </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': customerForm.phone.$dirty && customerForm.phone.$invalid }">
-          <label class="control-label" for="phone">Phone</label>
-          <div class="controls">
-            <input name="phone" type="tel" data-ng-model="phone" class="form-control" placeholder="Phone number" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-primary">
-        </div>
-        <div data-ng-show="error" class="text-danger">
-          <strong data-ng-bind="error"></strong>
-        </div>
-      </fieldset>
-    </form>
+  <div class="col-md-12" data-ng-include src="'/modules/customers/views/customer-form.client.view.html'">
   </div>
 </section>
